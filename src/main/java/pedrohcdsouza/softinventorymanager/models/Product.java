@@ -2,20 +2,20 @@ package pedrohcdsouza.softinventorymanager.models;
 
 public class Product {
 
-    private int id;
+    private Integer id;
     private String name;
-    private int quantity;
     private double price;
+    private int quantity;
 
     // Constructor
-    public Product(int id, String name, int quantity, double price) {
+    public Product(Integer id, String name, double price, int quantity) {
         this.id = id;
         this.name = name;
-        this.quantity = quantity;
         this.price = price;
+        this.quantity = quantity;
     }
     // Getters
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -32,7 +32,7 @@ public class Product {
     }
 
     // Setters
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
