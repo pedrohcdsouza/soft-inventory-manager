@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
 <VBox spacing="10.0" xmlns:fx="http://javafx.com/fxml" fx:controller="pedrohcdsouza.softinventorymanager.controllers.ViewController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
 
+    <HBox spacing="10.0">
+        <Button text="Adicionar Produto" onAction="#handleAddProduct"/>
+        <Button text="Editar Produto" onAction="#handleEditProduct"/>
+        <Button text="Remover Produto" onAction="#handleDeleteProduct"/>
+    </HBox>
+
+    <TableView fx:id="productTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="nameColumn" text="Nome" />
+            <TableColumn fx:id="priceColumn" text="Preço" />
+            <TableColumn fx:id="quantityColumn" text="Quantidade" />
+        </columns>
+    </TableView>
 </VBox>
